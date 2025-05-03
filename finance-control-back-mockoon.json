@@ -38,12 +38,66 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "39c0c099-3899-4e04-8052-f491f2c6b721",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "6279bedc-a0db-42a5-98c0-9583e9445286",
+          "body": "{\n  \"message\": \"Login efetuado com sucesso!\",\n  \"loggedUser\": {\n    \"id\": \"123abc123abc\",\n    \"username\": \"admin\",\n    \"email\": \"admin@email.com\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "99b81240-335d-4f33-b475-22f2e7dcfaff",
+          "body": "{\n  \"message\": \"Ocorreu um erro, tente novamente mais tarde.\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
     {
       "type": "route",
       "uuid": "69df9270-81ca-48f1-93a9-dc4cc8ed4125"
+    },
+    {
+      "type": "route",
+      "uuid": "39c0c099-3899-4e04-8052-f491f2c6b721"
     }
   ],
   "proxyMode": false,
