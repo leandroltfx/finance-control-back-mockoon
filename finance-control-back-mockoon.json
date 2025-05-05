@@ -67,7 +67,57 @@
         },
         {
           "uuid": "99b81240-335d-4f33-b475-22f2e7dcfaff",
-          "body": "{\n  \"message\": \"Ocorreu um erro, tente novamente mais tarde.\"\n}",
+          "body": "{\n  \"message\": \"Ocorreu um erro no login, tente novamente mais tarde.\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "20ff131c-87af-4ee3-a75a-eac3e8e396fa",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "user-registration",
+      "responses": [
+        {
+          "uuid": "bcddfa20-27d9-4db2-a551-13b8d4836ded",
+          "body": "{\n  \"message\": \"Cadastro realizado com sucesso!\",\n  \"loggedUser\": {\n    \"id\": \"123abc123abc\",\n    \"username\": \"admin\",\n    \"email\": \"admin@email.com\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "38a06b0a-9f65-4857-8479-ed2b040d04c2",
+          "body": "{\n  \"message\": \"Ocorreu um erro no cadastro de usuário, tente novamente mais tarde.\"\n}",
           "latency": 0,
           "statusCode": 500,
           "label": "",
@@ -98,6 +148,10 @@
     {
       "type": "route",
       "uuid": "39c0c099-3899-4e04-8052-f491f2c6b721"
+    },
+    {
+      "type": "route",
+      "uuid": "20ff131c-87af-4ee3-a75a-eac3e8e396fa"
     }
   ],
   "proxyMode": false,
