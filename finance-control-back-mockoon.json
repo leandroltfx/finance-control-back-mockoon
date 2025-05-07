@@ -9,37 +9,6 @@
   "folders": [],
   "routes": [
     {
-      "uuid": "69df9270-81ca-48f1-93a9-dc4cc8ed4125",
-      "type": "http",
-      "documentation": "",
-      "method": "get",
-      "endpoint": "",
-      "responses": [
-        {
-          "uuid": "d0f86e2c-557b-4647-917d-1aba71ae981b",
-          "body": "Finance Control Mockoon API works!",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null,
-      "streamingMode": null,
-      "streamingInterval": 0
-    },
-    {
       "uuid": "39c0c099-3899-4e04-8052-f491f2c6b721",
       "type": "http",
       "documentation": "",
@@ -100,7 +69,7 @@
           "uuid": "bcddfa20-27d9-4db2-a551-13b8d4836ded",
           "body": "{\n  \"message\": \"Cadastro realizado com sucesso!\",\n  \"loggedUser\": {\n    \"id\": \"123abc123abc\",\n    \"username\": \"admin\",\n    \"email\": \"admin@email.com\"\n  }\n}",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 201,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -148,9 +117,9 @@
       "responses": [
         {
           "uuid": "6120f241-8a05-41b4-8794-fb4024529558",
-          "body": "{\n  \"message\": \"Um código foi enviado para o seu e-mail.\"\n}",
+          "body": "",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 204,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -198,9 +167,9 @@
       "responses": [
         {
           "uuid": "e18b1673-292d-4883-8cb2-2e17d6d9da93",
-          "body": "{\n  \"userId\": \"32131321\"\n}",
+          "body": "",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 204,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -248,9 +217,9 @@
       "responses": [
         {
           "uuid": "93ee4409-7b64-443f-9e53-a5edb4748b9d",
-          "body": "{\n  \"message\": \"Nova senha criada com sucesso!\"\n}",
+          "body": "{\n  \"message\": \"Nova senha cadastrada com sucesso!\",\n  \"loggedUser\": {\n    \"id\": \"123abc123abc\",\n    \"username\": \"admin\",\n    \"email\": \"admin@email.com\"\n  }\n}",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 201,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
@@ -291,10 +260,6 @@
     }
   ],
   "rootChildren": [
-    {
-      "type": "route",
-      "uuid": "69df9270-81ca-48f1-93a9-dc4cc8ed4125"
-    },
     {
       "type": "route",
       "uuid": "39c0c099-3899-4e04-8052-f491f2c6b721"
