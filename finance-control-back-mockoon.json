@@ -138,6 +138,156 @@
       "responseMode": null,
       "streamingMode": null,
       "streamingInterval": 0
+    },
+    {
+      "uuid": "66b488c5-8857-4aa2-b94e-27aa203ac2f3",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "send-code",
+      "responses": [
+        {
+          "uuid": "6120f241-8a05-41b4-8794-fb4024529558",
+          "body": "{\n  \"message\": \"Um código foi enviado para o seu e-mail.\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "63363ae0-f7fd-4301-9285-f4f11eaaac44",
+          "body": "{\n  \"message\": \"Não foi possível enviar o código para o email, tente novamente mais tarde.\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d7bd52f1-babb-42a7-b041-d77ea0706fbd",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "validate-code",
+      "responses": [
+        {
+          "uuid": "e18b1673-292d-4883-8cb2-2e17d6d9da93",
+          "body": "{\n  \"userId\": \"32131321\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e1a07ecf-c1fc-4aa2-a8bb-ec91b8aef6b5",
+          "body": "{\n  \"message\": \"Não foi possível validar o código, tente novamente mais tarde.\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "4ce42dd9-5e74-4587-ba22-e5f9c9a18f09",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "create-new-password",
+      "responses": [
+        {
+          "uuid": "93ee4409-7b64-443f-9e53-a5edb4748b9d",
+          "body": "{\n  \"message\": \"Nova senha criada com sucesso!\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a7d61256-210b-41ef-bbcd-777aa2fbc380",
+          "body": "{\n  \"message\": \"Não foi possível cadastrar a nova senha, tente novamente mais tarde.\"\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
     }
   ],
   "rootChildren": [
@@ -152,6 +302,18 @@
     {
       "type": "route",
       "uuid": "20ff131c-87af-4ee3-a75a-eac3e8e396fa"
+    },
+    {
+      "type": "route",
+      "uuid": "66b488c5-8857-4aa2-b94e-27aa203ac2f3"
+    },
+    {
+      "type": "route",
+      "uuid": "d7bd52f1-babb-42a7-b041-d77ea0706fbd"
+    },
+    {
+      "type": "route",
+      "uuid": "4ce42dd9-5e74-4587-ba22-e5f9c9a18f09"
     }
   ],
   "proxyMode": false,
