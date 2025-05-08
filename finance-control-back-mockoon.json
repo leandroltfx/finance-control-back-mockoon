@@ -63,7 +63,7 @@
       "type": "http",
       "documentation": "",
       "method": "post",
-      "endpoint": "user-registration",
+      "endpoint": "user",
       "responses": [
         {
           "uuid": "bcddfa20-27d9-4db2-a551-13b8d4836ded",
